@@ -1,6 +1,4 @@
-{% extends 'base.html' %}
-{% include 'header.html' %}
-{% block title %} Home {% endblock %}
+{% extends 'header.html' %}
 {% block body %}
 {% block content %}
 <div class="container">
@@ -30,7 +28,8 @@
                 {% endfor %}
                 {% endif %}
                 {% endwith %}
-                <table class="table table-hover table-dark">
+                <table id= "bang1" class="table table-hover table-dark">
+                   <thead>
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
@@ -38,6 +37,8 @@
                         <th>Phone</th>
                         <th>Action</th>
                     </tr>
+                  </thead>
+                  <tbody>
                    {% for row in employees %}
                     <tr>
                         <td>{{row.id}}</td>
@@ -83,6 +84,7 @@
    </div>
 </div>
                     {% endfor %}
+                  </tbody>
                 </table>
             </div>
                   <!-- Modal Add Employee-->
